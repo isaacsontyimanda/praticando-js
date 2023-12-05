@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule sua média aqui!</title>
+    <link rel="shortcut icon" href="nasceu.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: block;
+            width: 95vw;
+            background-color: black;
+            color: aqua;
+            border-radius: 10px;
+            padding: 5px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 6vw;
+        }
+
+        p {
+            font-size: 2.7vw;
+            text-align: justify;
+            line-height: 2em;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+
+        a::before {
+            content:'🔗';
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            background-color: black;
+            color: aqua;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let nome = prompt('Por favor! Insira seu nome de estudante aqui: ')
+        let nota1 = Number(prompt('Digite a nota do primeiro trimestre: '))
+        let nota2 = Number(prompt('Digite a nota do segundo trimestre: '))
+        let nota3 = Number(prompt('Digite a nota do terceiro trimestre: '))
+        let média = (nota1 + nota2 + nota3) / 3
+        let a_r = média >= 10 ?'Aprovou' :'Reprovou'
+
+        document.write(`<div>
+            <h1>CALCULADOR DE MÉDIAS</h1>
+        </div>`)
+        document.write(`<p>Olá, aluno. <strong>${nome}</strong>. Seje muito bem-vindo! ao nosso calculador de médias, aqui tu podes <abbr title="Clique aqui para verificar a sua média!"><a href="media.html">verificar</a></abbr> se passaste ou não de classe. <br> As suas notas do primeiro: <strong>${nota1}</strong>, segundo: <strong>${nota2}</strong>, e terceiro trimestre: <strong>${nota3}</strong>. <br> Resultaram na seguinte média final: <strong>${média.toFixed(1)}</strong>. <br>Então com isso quero dar-te a boa ou má notícia você: <strong>${a_r}!</strong></p>`)
+    </script>
+</body>
+</html>

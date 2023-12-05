@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você Nasceu Em?</title>
+    <link rel="shortcut icon" href="nasceu.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div {
+            display: block;
+            width: 95vw;
+            background-color: black;
+            color: aqua;
+            border-radius: 10px;
+            padding: 5px;
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        p {
+            font-size: 3vw;
+            text-align: justify;
+            line-height: 1em;
+        }
+
+        strong {
+            background-color: black;
+            color: aqua;
+            border-radius: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+            let nome = prompt('Qual é o seu nome?')
+            let idade = Number(prompt('Quantos anos você tem?'))
+            let ano_presente = Number(2023)
+            let nasceste_em = Number(ano_presente - idade)
+            document.write(`<div>
+                <h1>Muito Prazer. Sr. ${nome}!</h1>
+            </div>`)
+            document.write(`<p>Seu nome tem <strong>${nome.length}</strong> letras</p>`)
+            document.write(`<p>Seu nome em maiúscula é <strong>${nome.toUpperCase()}</strong></p>`)
+            document.write(`<p>Seu nome em menúscula é <strong>${nome.toLowerCase()}</strong></p>`)
+            document.write(`<p>Você nasceu em <strong>${nasceste_em}</strong></p>`)
+    </script>
+</body>
+</html>
