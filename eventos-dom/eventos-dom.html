@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div#caixa {
+            background-color: aqua;
+            width: 200px;
+            height: 200px;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 200px;
+            text-align: center;
+            border: 6px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM</h1>
+    <div id="caixa">Interaja...</div>
+
+    <script>
+        let caixa = document.getElementById('caixa')
+        caixa.addEventListener(click="clicou()")
+        caixa.addEventListener('mouseenter="entrou()"')
+        caixa.addEventListener(mouseout="saiu()")
+        
+        function clicou() {
+            caixa.innerText = ('Clicou!')
+            caixa.style.backgroundColor = ('red')
+            caixa.style.color = ('white')
+        }
+
+        function entrou() {
+            caixa.document.getElementById('caixa')
+            caixa.innerText = ('Entrou!')
+        }
+
+        function saiu() {
+            caixa.document.getElementById('caixa')
+            caixa.innerText = ('Saíu!')
+        }
+    </script>
+</body>
+</html>
