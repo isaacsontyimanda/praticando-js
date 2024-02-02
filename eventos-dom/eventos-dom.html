@@ -9,7 +9,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        div#caixa {
+        div#box {
             background-color: aqua;
             width: 200px;
             height: 200px;
@@ -25,28 +25,22 @@
 </head>
 <body>
     <h1>Eventos DOM</h1>
-    <div id="caixa">Interaja..."</div>
-
+    <div id="box">Interaja...</div>
     <script>
-        let caixa = document.getElementById('caixa')
-        caixa.addEventListener(click="clicou()")
-        caixa.addEventListener('mouseenter="entrou()"')
-        caixa.addEventListener(mouseout="saiu()")
-        
+        let box = document.querySelector('div#box')
+        box.addEventListener('click', clicou)
+        box.addEventListener('mouseout', saiu)
+        box.addEventListener('mouseenter', entrou)
         function clicou() {
-            caixa.innerText = ('Clicou!')
-            caixa.style.backgroundColor = ('red')
-            caixa.style.color = ('white')
+            box.innerHTML = 'Clicou!'
+            box.style.backgroundColor = 'red'
         }
-
-        function entrou() {
-            caixa.document.getElementById('caixa')
-            caixa.innerText = ('Entrou!')
-        }
-
         function saiu() {
-            caixa.document.getElementById('caixa')
-            caixa.innerText = ('Saíu!')
+            box.innerHTML = 'Saiu!'
+            box.style.backgroundColor = 'aqua'
+        }
+        function entrou() {
+            box.innerHTML = 'Entrou!'
         }
     </script>
 </body>
